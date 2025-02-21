@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../assets/couple.png" type="image/x-icon">
+    <title>Eu te amo, amor</title>
+</head>
+<body>
+    <div class="back">
+        <a href="../question/index.html" class="back-btn"><img src="../../assets/back.png" alt="">Voltar</a>
+    </div>
+    <section class="container">
+        <img src="../../assets/no.jpeg" alt="Gatinho Kawaii na espreita">
+        <h1>Tem certeza disso?</h1>
+        <p>Não faça nada que você possa se arrepender num futuro próximo .</p>
+        <div class="buttons">
+            <a href="../yes/index.html" class="button yes">Sim</a>
+            <a href="../no/index.html" class="button no">Não</a>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const noButton = document.querySelector(".no");
+            const yesButton = document.querySelector(".yes");
+            let yesSize = 35; // Tamanho inicial da largura (%)
+    
+            noButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Evita o redirecionamento
+    
+                if (yesSize < 100) { // Limite máximo para cobrir quase toda a tela
+                    yesSize += 10; // Aumenta a largura em 15% a cada clique
+                    yesButton.style.width = yesSize + "%";
+                    yesButton.style.height = (yesSize / 2.5) + "vh"; // Ajusta altura dinamicamente
+                    yesButton.style.fontSize = (1.2 + yesSize / 40) + "rem"; // Ajusta o tamanho do texto
+                }
+            });
+        });
+    </script>
+</body>
+</html>
