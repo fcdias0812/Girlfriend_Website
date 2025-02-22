@@ -25,6 +25,7 @@ body{
 
 .container > img{
     width: 12rem;
+    border-radius: 8px;
 }
 
 .buttons{
